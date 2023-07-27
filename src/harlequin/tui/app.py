@@ -75,6 +75,10 @@ class Harlequin(App, inherit_bindings=False):
                 read_only=read_only,
                 allow_unsigned_extensions=allow_unsigned_extensions
             )
+            if allow_unsigned_extensions:
+                self.connection.sql("SET custom_extension_repository='welsch.lu/duckdb/prql/latest';")
+                self.connection.install_extension("prql", force_install=True)
+                self.connection.load_extension("prql")
         except HarlequinExit:
             self.exit()
 
