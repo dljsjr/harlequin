@@ -1158,15 +1158,19 @@ name = "textual-textarea"
 version = "0.3.2"
 description = "A text area (multi-line input) with syntax highlighting for Textual"
 optional = false
-python-versions = ">=3.8,<4.0"
-files = [
-    {file = "textual_textarea-0.3.2-py3-none-any.whl", hash = "sha256:8dfc5c8e11c5e42076594d7d6708492172a3317d3fe09deb6f6e4e8dca2f14a5"},
-    {file = "textual_textarea-0.3.2.tar.gz", hash = "sha256:0a9ae6ed3715732794f3a54e82212e4d8e8e1ad32002e3ea8325653c7dabedac"},
-]
+python-versions = "^3.8"
+files = []
+develop = false
 
 [package.dependencies]
-pyperclip = ">=1.8.2,<2.0.0"
-textual = ">=0.21.0,<1.0.0"
+pyperclip = "^1.8.2"
+textual = ">=0.21.0, <1.0.0"
+
+[package.source]
+type = "git"
+url = "https://github.com/dljsjr/textual-textarea.git"
+reference = "expand-user-homedirs-on-save-and-load"
+resolved_reference = "ba2beef0c4680fd9a14c5a87ca4d1309d59787da"
 
 [[package]]
 name = "tomli"
@@ -1349,4 +1353,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "a369a5ed9c13d35863cb282b63567d050c073e191cf6d7425c7859e596f2eeae"
+content-hash = "5a15f2442b0d9f4f28b7f4e38211cf824714e01ae4badddb38d64d53ac8e5735"
